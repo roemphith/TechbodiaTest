@@ -2,7 +2,9 @@ const path = require('path')
 
 module.exports = {
   // publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
-  publicPath: process.env.NODE_ENV === "production" ? "/REPO_NAME/" : "/",
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/reponame'
+  : '/',
   devServer: {
     proxy: process.env.VUE_APP_API,
     host: 'localhost'
