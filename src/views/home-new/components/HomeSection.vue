@@ -224,5 +224,4 @@ export default {
 
 <style lang="scss">
 @import "@core/assets/scss/swiper";
-@import "../../../assets/scss/pages/home/home-new";
 </style>
