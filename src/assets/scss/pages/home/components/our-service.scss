@@ -1,0 +1,112 @@
+
+@import '../../../variables/variables';
+.row{
+    h1{
+        margin: 1rem;
+        span{
+            border-bottom: 3px solid $primary;
+        }
+    }
+    .card-service{
+        padding: 1rem 4rem;
+        .sm-card{
+            .img-cycle{
+                position: relative;
+                overflow: hidden;
+                width: 80px;
+                background: rgb(197, 196, 196);
+                margin-bottom: 1rem;
+                border-radius: 50%;
+                padding: 6px;
+                .img{
+                    img{
+                        display: inline-block;
+                        transition: .3s;
+                    }
+                    .sm-img{
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        display: flex;
+                        justify-content: space-around;
+                        bottom: 0;
+                        transform: translateY(100%);
+                        img{
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+            .title{
+                display: -webkit-box;
+                -webkit-line-clamp:2 ;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            &:hover{
+                img{
+                    transform: translateY(-80px);
+                }
+                .title{
+                    color: $primary;
+                }
+            }
+        }
+        .description{
+            display: -webkit-box;
+            -webkit-line-clamp:2 ;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .row{
+        .card-service{
+            .sm-card{
+                .img-cycle{
+                    width: 50px;
+                    left: 20%;
+                    .img{
+                        .sm-img{
+                            width: 45px;
+                        }
+                    }
+                }
+                &:hover{
+                    img{
+                        transform: translateY(-50px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .row{
+        .card-service{
+            padding: 1rem;
+            .sm-card{
+                .img-cycle{
+                    left: 20%;
+                    .title{
+                        display: -webkit-box;
+                        -webkit-line-clamp:1 ;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px){
+    .row{
+        .card-service{
+            padding: 1rem;
+        }
+    }
+}

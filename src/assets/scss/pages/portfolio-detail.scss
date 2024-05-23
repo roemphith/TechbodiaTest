@@ -1,0 +1,178 @@
+@import '../variables/variables';
+.portfolio-detail{
+  section.portflio {
+    .images-wrapper {
+      position: relative;
+      padding-top: 2rem;
+      .all-photo {
+        position: absolute;
+        z-index: 1;
+        bottom: 2.5rem;
+        left: 1.5rem;
+        .btn-group {
+          .icon-category {
+            margin-right: 10px;
+          }
+          button {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgb(107, 107, 107);
+            box-sizing: border-box;
+            border-radius: 40px !important;
+            color: $primary;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    .portflio-img {
+      border: 1px solid #cfcfcf;
+      border-radius: 7px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .portflio-img:nth-child(odd) {
+      .image {
+        padding: 1rem 0.2rem 1rem 0rem;
+      }
+    }
+    .portflio-img:nth-child(even) {
+      .image {
+        padding: 1rem 0rem 1rem 0.2rem;
+      }
+    }
+  
+    .portflio-content {
+      .content-right {
+        margin-top: -5.9rem;
+        .project-detail {
+          overflow: hidden;
+          background-color: #fff;
+          border-radius: 7px;
+          box-shadow: 0px 10px 60px 0px rgb(212 212 212 / 38%);
+          position: relative;
+          .title h4 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-position: center;
+  
+            padding: 20px 35px;
+            background-color: $primary;
+            color: #fff;
+            margin-bottom: 0;
+          }
+          .desc {
+            list-style-type: none;
+            padding: 35px;
+            li {
+              padding: 0px;
+              margin: 0px 0px 20px 0px;
+            }
+            .label {
+              font-size: 17px;
+              color: #74787c;
+              font-weight: 700;
+              position: relative;
+              &::before {
+                content: ':';
+                right: -10px;
+                position: absolute;
+              }
+            }
+            .value {
+              color: #211e3b;
+              font-weight: 700;
+              font-size: 17px;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .testimonail-list {
+    .container {
+      border-top: 1px solid #e8e8eb;
+    }
+  }
+}
+
+.images-wrapper .row {
+  .col-6 {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  section.portflio .portflio-content .content-right {
+    margin: 0px;
+  }
+}
+@media (max-width: 992px) {
+  section.portflio .portflio-content .content-right .project-detail {
+    .title h4 {
+      padding: 1rem 1.5rem;
+    }
+    .desc {
+      padding: 1rem;
+      li {
+        margin-bottom: 0.5rem;
+      }
+      .label,
+      .value {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  section.portflio .portflio-content .content-right {
+    padding-top: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .images-wrapper .row {
+    --bs-gutter-x: 0.5rem;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    .col-6 {
+      margin-bottom: 0.5rem;
+    }
+  }
+  section.portflio {
+    .container {
+      .my-5 {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+      }
+      .portflio-img:nth-child(even),
+      .portflio-img:nth-child(odd) {
+        .image {
+          padding: 0.4rem 0rem;
+        }
+      }
+      .portflio-img:nth-child(odd) {
+        padding-right: 6px;
+      }
+      .portflio-img:nth-child(even) {
+        padding-left: 6px;
+      }
+    }
+  }
+}
+@media (max-width: 448px) {
+  section.portflio {
+    .container {
+      .my-5 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+      }
+      .images-wrapper .all-photo .btn-group {
+        top: -80px;
+      }
+    }
+  }
+}

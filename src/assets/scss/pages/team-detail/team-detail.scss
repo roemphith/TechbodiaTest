@@ -1,0 +1,41 @@
+@import "../../variables/variables";
+.team-detail{
+  .content-detail{
+    padding:3rem 0;
+    .row-detail{
+      .team-content{
+        .member-position{
+          color: #696969;
+          font-size: 21px;
+        }
+        .social{
+            a{
+              color:$primary;
+              font-size: 25px;
+              padding: 12px;
+              &:hover{
+                color:#febc35;
+                transition: 0.3s;
+              }
+            }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+ .col-md-4{
+  // padding:0 70px;
+ }
+ .team-content{
+  .member-name{
+    font-size: 27px;
+    padding-top:1rem;
+  }
+ }
+}
+@media screen and (max-width: 480px) {
+  .col-md-4{
+   padding:0 px;
+  }
+ }

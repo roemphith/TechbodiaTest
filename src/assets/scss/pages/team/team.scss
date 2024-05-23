@@ -1,0 +1,86 @@
+@import "../../variables/variables";
+.team-page{
+ 
+  .header-content{
+    background-image: url("~@/assets/images/teams/team_bg.png");
+    position: relative;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+    height: 80vh;
+    .container{
+      position: relative;
+      top: 40%;
+      .title{
+        color: $bg-light-gray;
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: capitalize;
+        letter-spacing: -2px;
+        z-index: 1000;
+      }
+      .breadcrumb{
+        .breadcrumb-item{
+          a,span{
+            color:$bg-light-gray;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.5;
+          }
+        }
+        .breadcrumb-item.active:before{
+          content: '>';
+          font-size: 18px;
+          font-weight: 900;
+          color:$bg-light-gray;
+        }
+      }
+    }
+  }
+  .header-content:before{
+    content: " ";
+    background: $main;
+    position: absolute;
+    opacity: 0.8;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .main-content{
+   
+    .container{
+     
+      .list-member{
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .team-page{
+    .main-content{
+      .container {
+        .title-wrap{
+          text-align: center;
+          
+        }
+      }
+    }
+  }
+  .card-team h6.name{
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .team-page {
+    margin-bottom: 3rem;
+    .main-content {
+      margin-top: 3rem;
+    }
+  }
+}

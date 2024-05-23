@@ -1,0 +1,102 @@
+@import '../../../variables/variables';
+
+.counter{
+    background: $primary;
+    padding: 2.5rem;
+        .counter-item{
+            .img{
+                margin-left: 3em;
+                position: absolute;
+                img{
+                    background: rgba(233, 231, 231, 0.559);
+                    border-radius: 50%;
+                    width: 11rem;
+                    opacity: 0.5;
+                    padding: 0.6rem;
+                    z-index: -1;
+                    transition: 1s;
+                }
+                &:hover{
+                    img{
+                        opacity: 0.9;
+                    }
+                }
+            }
+            .content{
+                padding-top: 6rem;
+                color: #fff;
+                span{
+                    transition: 1s;
+                    font-size: 70px;
+                    font-weight: 700;
+                }
+                h5{
+                    width: 13rem;
+                }
+            }
+        }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .counter{
+        .counter-item{
+            .img{
+                width: 8rem;
+            }
+            .content{
+                padding-top: 4.5rem;
+                span{
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .counter{
+        .counter-item{
+            .img{
+                // margin-left: 1em;
+                width: 8rem;
+            }
+            .content{
+                padding-top: 4.5rem;
+                width: 100%;
+                span{
+                    font-size: 50px;
+                }
+                h1{
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 486px){
+    .counter{
+        .counter-item{
+            .img{
+                margin-left: 1rem;
+                width: 4rem;
+            }
+            .content{
+                padding-top: 2.5rem;
+                // width: 100%;
+                span{
+                    font-size: 25px;
+                    flex-wrap: wrap;
+                }
+                h5{
+                    width: 5rem;
+                    display: -webkit-box;
+                        -webkit-line-clamp:2 ;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    font-size:13px ;
+                }
+            }
+        }
+    }
+}
